@@ -1,0 +1,79 @@
+/**** MAIN BODY ****/
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.full-width {
+    width: 100vw;
+    padding: 250px 0;
+}
+.content-container {
+    width: 100%;
+    margin: auto;
+}
+.page-heading {
+    padding-top: 300px;
+    background-color: rgb(130, 183, 226);
+}
+
+
+
+/**** PAGE HEADINGS ****/
+.page-heading h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: antiquewhite;
+}
+.page-heading h1 .highlight {
+    color: rgb(245, 118, 0);
+}
+
+
+/**** MAIN BEVIOUR CLASSES ****/
+.visible {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+
+/********* DESKTOP VIEW ********/
+@media screen and (min-width: 768px) {
+    .content-container {
+        max-width: 1175px;
+    }
+}
+
+
+
+/********* LAPTOP VIEW ********/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .content-container {
+        max-width: 940px;
+    }
+}
+
+
+/********* TABLET VIEW ********/
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    .content-container {
+        max-width: 725px;
+    }
+}
+
+
+/********* MOBILE VIEW ********/
+@media screen and (max-width: 767px) {
+    
+}
