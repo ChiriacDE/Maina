@@ -4,15 +4,16 @@ header {
     height: auto;
     background: url("https://t3.ftcdn.net/jpg/02/67/43/44/360_F_267434405_rVfKoBDQpb6smmbNtDRWvzAYCYpsX47E.jpg") no-repeat center/cover;
     color: #fff;
-    padding: 200px 0;
+    height: 100%;
+    width: 100%;
 }
 header .header-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 30px;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     background-color: rgba(45, 36, 45, 0.2);
 }
 .main-navbar a {
@@ -64,7 +65,7 @@ header p {
 /********* DESKTOP VIEW ********/
 @media screen and (min-width: 861px) {
     .header-container {
-        max-width: 1175px;
+        max-width: 1200px;
         margin: auto;
     }
     #header-hamburger {
@@ -76,8 +77,14 @@ header p {
 
 /********* MOBILE VIEW ********/
 @media screen and (max-width: 860px) {
-    header {
-        padding: 200px 20px;
+    header .header-container {
+        padding: 280px 20px;
+    }
+    .header-container h1 {
+        text-align: center;
+        font-size: 44px;
+        font-weight: 900;
+        color: antiquewhite;
     }
 }
 

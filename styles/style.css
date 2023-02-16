@@ -17,7 +17,7 @@ a {
 }
 .full-width {
     width: 100vw;
-    padding: 250px 0;
+    padding: 360px 0;
 }
 .content-container {
     width: auto;
@@ -61,7 +61,7 @@ a {
 /********* DESKTOP VIEW ********/
 @media screen and (min-width: 861px) {
     .content-container {
-        max-width: 1175px;
+        max-width: 1200px;
     }
 }
 
@@ -69,5 +69,10 @@ a {
 
 /********* MOBILE VIEW ********/
 @media screen and (max-width: 860px) {
-    
+    .full-width {
+        padding: 280px 0;
+    }
+    .content-container {
+        padding: 0 20px;
+    }
 }

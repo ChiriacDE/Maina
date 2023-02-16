@@ -106,7 +106,7 @@ class ResponsiveNav {
     const changeNavIfWindowScrollOptions = {
       nav: ".main-nav", // DOM elemrnt (class or id)
       state: "active", // Which (class or id) use to change 'nav' of page if will be the scroll.
-      heightActivateState: 150 // How many pixels will scroll page when we use the new state for nav.
+      heightActivateState: 15 // How many pixels will scroll page when we use the new state for nav.
     };
   
     // created new changeNavIfWindowScroll.

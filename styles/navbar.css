@@ -9,6 +9,7 @@
 .main-nav .nav-content, .main-nav .tuggle-content {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 .main-nav .nav-content .left-content, .main-nav .tuggle-content .left-content,
 .main-nav .nav-content .right-content,
@@ -63,7 +64,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding-left: 75px;
 }
 .main-nav.open .tuggle-btn span:nth-child(1),
 .main-nav.open .tuggle-btn span:nth-child(4) {
@@ -82,57 +82,6 @@
   position: fixed;
   background-color: #fff;
 }
-
-@media (min-width: 861px) {
-  .main-nav .tuggle-content {
-    height: 100%;
-  }
-  .main-nav .nav-content, .main-nav .tuggle-content {
-    padding: 20px 30px;
-  }
-  .main-nav ul {
-    display: inline-flex;
-    padding: 0 20px;
-  }
-}
-@media (max-width: 860px) {
-  .main-nav .left-content {
-    flex-direction: row-reverse;
-  }
-  .main-nav .tuggle-btn {
-    display: block;
-  }
-  .main-nav .nav-content, .main-nav .tuggle-content {
-    padding: 20px;
-  }
-  .main-nav .tuggle-content {
-    padding-left: 30px;
-    flex-direction: column;
-    visibility: hidden;
-  }
-  .main-nav .tuggle-content .left-content,
-  .main-nav .tuggle-content .right-content {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .main-nav .tuggle-content .right-content {
-    border-top: 1px solid #c1c1c1;
-    padding-top: 20px;
-  }
-  .main-nav .tuggle-content .nav-item {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-  .main-nav .tuggle-content .nav-item:last-child {
-    margin-bottom: 0;
-  }
-  .main-nav.open .tuggle-content {
-    top: 100%;
-    visibility: initial;
-    background-color: #fff;
-  }
-}
-
 .main-nav ul {
   text-transform: uppercase;
 }
@@ -142,7 +91,7 @@
 }
 .main-nav a {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   color: #fff;
   text-decoration: none;
@@ -157,18 +106,14 @@
 .main-nav .tuggle-btn span {
   background: #fff;
 }
-.main-nav .tuggle-content {
-  padding-left: 100px;
-}
 .main-nav .logo {
-  background: url("/media/maina-logo1-white.svg") no-repeat center/cover;
-  background: local;
+  background: url("../media/maina-logo1-white.svg") no-repeat center/cover;
   display: block;
   width: 55px;
   height: 40px;
 }
 .main-nav.active .logo {
-  background: url("/media/maina-logo1.svg") no-repeat center/cover;
+  background: url("../media/maina-logo1.svg") no-repeat center/cover;
 }
 .main-nav .registration {
   position: relative;
@@ -217,22 +162,64 @@
   background-color: rgb(245, 118, 0);
 }
 
+
+/********* DESKTOP VIEW ********/
+@media (min-width: 861px) {
+  .main-nav .tuggle-content {
+    height: 100%;
+    padding-left: 90px;
+  }
+  .main-nav ul {
+    display: inline-flex;
+  }
+}
+
+
+/********* MOBILE VIEW ********/
 @media (max-width: 860px) {
   .main-nav .tuggle-content {
-    padding-right: 90px;
+    padding-right: 90px;  
+    padding-left: 30px;
+    flex-direction: column;
+    visibility: hidden;
   }
   .main-nav .tuggle-content .nav-item {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 1px solid #c1c1c1;
+    margin-right: 0;
   }
   .main-nav .tuggle-content .nav-item:last-child {
     border-bottom: none;
+    margin-bottom: 0;
+  }
+  .main-nav.open .tuggle-content {
+    top: 100%;
+    visibility: initial;
+    background-color: #fff;
   }
   .main-nav.open .tuggle-content {
     background-color: rgba(0, 0, 0, 0.5);
   }
   .main-nav.active .tuggle-content {
     background-color: #fff;
+  }
+  .main-nav .left-content {
+    flex-direction: row-reverse;
+  }
+  .main-nav .tuggle-btn {
+    display: block;
+  }
+  .main-nav .tuggle-content .left-content,
+  .main-nav .tuggle-content .right-content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .main-nav .tuggle-content .right-content {
+    border-top: 1px solid #c1c1c1;
+    padding-top: 20px;
+  }
+  .main-nav .right-content .nav-item:first-child {
+    display: none;
   }
 }
