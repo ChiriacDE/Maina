@@ -1,11 +1,14 @@
 /**** MAIN BODY ****/
 html,
 body {
-    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: "Montserrat", sans-serif;
     font-size: 1em;
     line-height: 1.4;
-    height: 100%;
-
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -17,14 +20,21 @@ a {
     padding: 250px 0;
 }
 .content-container {
-    width: 100%;
+    width: auto;
     margin: auto;
 }
-.page-heading {
-    padding-top: 300px;
+.section-one {
     background-color: rgb(130, 183, 226);
 }
-
+.section-two {
+    background-color: rgb(252, 250, 122);
+}
+.section-three {
+    background-color: rgb(213, 157, 250);
+}
+.section-four {
+    background-color: rgb(250, 146, 189);
+}
 
 
 /**** PAGE HEADINGS ****/
@@ -49,7 +59,7 @@ a {
 
 
 /********* DESKTOP VIEW ********/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 861px) {
     .content-container {
         max-width: 1175px;
     }
@@ -57,23 +67,7 @@ a {
 
 
 
-/********* LAPTOP VIEW ********/
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .content-container {
-        max-width: 940px;
-    }
-}
-
-
-/********* TABLET VIEW ********/
-@media screen and (min-width: 768px) and (max-width: 979px) {
-    .content-container {
-        max-width: 725px;
-    }
-}
-
-
 /********* MOBILE VIEW ********/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
     
 }

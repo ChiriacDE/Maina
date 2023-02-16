@@ -1,0 +1,142 @@
+// var
+$nav-tuggle-btn-size: (
+  line-width: 35px,
+  line-thickness: 2px,
+  distance-between-lines: 9px
+);
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  * {
+    box-sizing: border-box;
+  }
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    .left-content,
+    .right-content {
+      z-index: 10;
+    }
+  }
+  .left-content,
+  .right-content {
+    display: flex;
+  }
+  .nav-item {
+    margin-right: 20px;
+  }
+  .right-content {
+    .nav-item:last-child {
+      margin-right: 0;
+    }
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .tuggle-btn {
+    display: none;
+    position: relative;
+    width: map-get($nav-tuggle-btn-size, line-width);
+    height: map-get($nav-tuggle-btn-size, line-thickness) * 3 +
+      map-get($nav-tuggle-btn-size, distance-between-lines) * 2;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      left: 0;
+      height: map-get($nav-tuggle-btn-size, line-thickness);
+      width: 100%;
+      background: #000;
+      border-radius: 5px;
+      opacity: 1;
+      transition: 0.25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: map-get($nav-tuggle-btn-size, line-thickness) +
+          map-get($nav-tuggle-btn-size, distance-between-lines);
+      }
+      &:nth-child(4) {
+        top: map-get($nav-tuggle-btn-size, line-thickness) * 2 +
+          map-get($nav-tuggle-btn-size, distance-between-lines) * 2;
+      }
+    }
+  }
+  .tuggle-content {
+    @extend .nav-content;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-left: 75px;
+  }
+  &.open {
+    .tuggle-btn {
+      span:nth-child(1),
+      span:nth-child(4) {
+        top: 50%;
+        left: 50%;
+        width: 0;
+        opacity: 0;
+      }
+      span:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &.active {
+    position: fixed;
+    background-color: #fff;
+  }
+}
+@media (min-width: 860px) {
+  .main-nav .tuggle-content {
+    height: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .main-nav {
+    .tuggle-btn {
+      display: block;
+    }
+    .tuggle-content {
+      padding-left: 30px;
+      flex-direction: column;
+      visibility: hidden;
+      .left-content,
+      .right-content {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .right-content {
+        border-top: 1px solid #c1c1c1;
+        padding-top: 20px;
+      }
+      .nav-item {
+        margin-right: 0;
+        margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.open {
+      .tuggle-content {
+        top: 100%;
+        visibility: initial;
+        background-color: #fff;
+      }
+    }
+  }
+}
