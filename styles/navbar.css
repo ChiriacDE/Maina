@@ -93,8 +93,11 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
-  color: #fff;
+  color: #f57600;
   text-decoration: none;
+}
+.main-nav.open a {
+  color: #fff;
 }
 .main-nav a:hover {
   text-decoration: underline;
@@ -104,13 +107,22 @@
   margin-bottom: auto;
 }
 .main-nav .tuggle-btn span {
+  background: #f57600;
+}
+.main-nav.open .tuggle-btn span {
   background: #fff;
 }
+.main-nav.open.active .tuggle-btn span {
+  background: #333;
+}
 .main-nav .logo {
-  background: url("../media/maina-logo1-white.svg") no-repeat center/cover;
+  background: url("../media/maina-logo1-orange.svg") no-repeat center/cover;
   display: block;
   width: 55px;
   height: 40px;
+}
+.main-nav.open .logo {
+  background: url("../media/maina-logo1-white.svg") no-repeat center/cover;
 }
 .main-nav.active .logo {
   background: url("../media/maina-logo1.svg") no-repeat center/cover;
@@ -118,23 +130,29 @@
 .main-nav .registration {
   position: relative;
   padding: 10px 40px 10px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #f5760052;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+}
+.main-nav.open .registration {
+  border: 2px solid #ffffff52;
 }
 .main-nav .registration:after {
   position: absolute;
   right: 15px;
   top: 9px;
   content: "→";
-  color: rgb(245, 118, 0);
+  color: #f57600;
+}
+.main-nav.open .registration:after {
+  color: #fff;
 }
 .main-nav .registration:hover, .main-nav .registration:focus {
-  border-color: rgb(245, 118, 0);
+  border-color: #f57600;
   text-decoration: none;
 }
 .main-nav.open {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .main-nav.open .tuggle-content {
   box-shadow: 0px 5px 12px -8px #000;
@@ -150,16 +168,16 @@
   background: #333;
 }
 .main-nav.active .registration {
-  border-color: rgb(245, 118, 0);
-  background-color: rgb(245, 118, 0);
+  border-color: #f57600;
+  background-color: #f57600;
   color: #fff;
 }
 .main-nav.active .registration:after {
   color: #fff;
 }
 .main-nav.active .registration:hover {
-  border-color: rgb(245, 118, 0);
-  background-color: rgb(245, 118, 0);
+  border-color: #f57600;
+  background-color: #f57600;
 }
 
 
@@ -199,7 +217,7 @@
     background-color: #fff;
   }
   .main-nav.open .tuggle-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .main-nav.active .tuggle-content {
     background-color: #fff;

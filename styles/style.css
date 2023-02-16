@@ -12,6 +12,20 @@ body {
     margin: 0;
     padding: 0;
 }
+h1 {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 56px;
+    font-weight: 900;
+    color: #000000BF;
+}
+h1 .highlight {
+    color: #f57600;
+}
+h2 {
+    padding: 30px 0;
+    font-size: 38px;
+}
 a {
     text-decoration: none;
 }
@@ -22,30 +36,39 @@ a {
 .content-container {
     width: auto;
     margin: auto;
+    padding: 0 20px;
+}
+.content-container h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.content-container p {
+    font-weight: 300;
+    line-height: 1.5;
 }
 .section-one {
     background-color: rgb(130, 183, 226);
 }
+.section-one .highlight {
+    color: rgb(234, 230, 4);
+}
 .section-two {
     background-color: rgb(252, 250, 122);
+}
+.section-two .highlight {
+    color: rgb(153, 0, 255);
 }
 .section-three {
     background-color: rgb(213, 157, 250);
 }
+.section-three .highlight {
+    color: rgb(255, 0, 106);
+}
 .section-four {
     background-color: rgb(250, 146, 189);
 }
-
-
-/**** PAGE HEADINGS ****/
-.page-heading h1 {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    color: antiquewhite;
-}
-.page-heading h1 .highlight {
-    color: rgb(245, 118, 0);
+.section-four .highlight {
+    color: rgb(0, 140, 255);
 }
 
 
@@ -71,8 +94,5 @@ a {
 @media screen and (max-width: 860px) {
     .full-width {
         padding: 280px 0;
-    }
-    .content-container {
-        padding: 0 20px;
     }
 }

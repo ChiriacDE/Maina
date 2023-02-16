@@ -2,10 +2,13 @@
 header {
     display: flex;
     height: auto;
-    background: url("https://t3.ftcdn.net/jpg/02/67/43/44/360_F_267434405_rVfKoBDQpb6smmbNtDRWvzAYCYpsX47E.jpg") no-repeat center/cover;
+    background: url("../media/home-background.jpg") no-repeat center/cover;
     color: #fff;
     height: 100%;
     width: 100%;
+}
+.header-container {
+    margin: 20vh auto auto;
 }
 header .header-content {
     display: flex;
@@ -16,6 +19,9 @@ header .header-content {
     width: auto;
     background-color: rgba(45, 36, 45, 0.2);
 }
+.header-highlight {
+    color: #f57600;
+}
 .main-navbar a {
     color: #fff;
     font-size: 36px;
@@ -24,49 +30,22 @@ header .header-content {
 .main-navbar a:not(.main-navbar a:nth-child(1)) {
     border-left: 2px solid #fff;
 }
-.header-container h1 {
-    text-align: center;
-    font-size: 56px;
-    font-weight: 900;
-    color: antiquewhite;
-}
-.header-container h1 .highlight {
-    color: rgb(245, 118, 0);
-}
 .header-container p {
     text-align: center;
     font-size: 32px;
-    color: rgb(255, 145, 0);
+    color: #f57600;
 }
-
-header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 40px;
-    font-weight: 400;
-  }
 header p {
     font-size: 22px;
     font-weight: 300;
+    padding: 0 20px;
 }
-  
-.content-container {
-    padding: 0 30px;
-}
-.content-container h2 {
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.content-container p {
-    font-weight: 300;
-    line-height: 1.5;
-}
+
 
 /********* DESKTOP VIEW ********/
 @media screen and (min-width: 861px) {
     .header-container {
         max-width: 1200px;
-        margin: auto;
     }
     #header-hamburger {
         display: none;   
@@ -77,14 +56,14 @@ header p {
 
 /********* MOBILE VIEW ********/
 @media screen and (max-width: 860px) {
-    header .header-container {
-        padding: 280px 20px;
-    }
     .header-container h1 {
         text-align: center;
         font-size: 44px;
         font-weight: 900;
-        color: antiquewhite;
+        padding: 20px;
+    }
+    .header-container p {
+        padding: 0 20px;
     }
 }
 

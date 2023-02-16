@@ -13,6 +13,7 @@ class ResponsiveNav {
   
       this._eddClickEvents();
       this._addResizeEvent();
+      this._addClickOutsideEvent();
     }
     _addResizeEvent() {
       window.addEventListener("resize", () => {
@@ -33,6 +34,23 @@ class ResponsiveNav {
           this._toggleNav(false);
         } else if ($(e.target).is(`${this.nav}, ${this.navContent}`)) {
           return;
+        }
+      });
+    }
+    _addClickOutsideEvent() {
+      document.addEventListener("click", (e) => {
+        if (!this.$nav.hasClass(this.state)) {
+          return;
+        }
+  
+        if (window.innerWidth <= this.checkpoint) {
+          const clickedOutsideNav = !$(e.target).closest(this.nav).length;
+          const clickedNavLink = $(e.target).is(`${this.navLink}, ${this.navLinkContent}`);
+          const clickedToggleBtn = $(e.target).is(`${this.tuggleBtn}, ${this.tuggleBtnContent}`);
+  
+          if (clickedOutsideNav && !clickedNavLink && !clickedToggleBtn) {
+            this._toggleNav();
+          }
         }
       });
     }
