@@ -2,7 +2,6 @@
 header {
     display: flex;
     height: auto;
-    background: url("../media/home-background.jpg") no-repeat center/cover;
     color: #fff;
     height: 100%;
     width: 100%;
@@ -33,12 +32,21 @@ header .header-content {
 .header-container p {
     text-align: center;
     font-size: 32px;
+    line-height: 1.25em;
     color: #f57600;
 }
 header p {
     font-size: 22px;
     font-weight: 300;
     padding: 0 20px;
+}
+
+/**** BACKGROUNDS ****/
+.home header {
+    background: url("../media/home-background.jpg") no-repeat center/cover;
+}
+.privacy header, .terms header {
+    background: url("../media/privacy-background.jpg") no-repeat center/cover;
 }
 
 

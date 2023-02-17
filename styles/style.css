@@ -26,8 +26,23 @@ h2 {
     padding: 30px 0;
     font-size: 38px;
 }
+h3 {
+    padding: 30px 0;
+}
 a {
     text-decoration: none;
+}
+p {
+    font-weight: 300;
+    line-height: 1.6em;
+    margin-bottom: 30px;
+}
+ul {
+    font-weight: 300;
+    padding: 20px;
+}
+li {
+    margin-bottom: 10px;
 }
 .full-width {
     width: 100vw;
@@ -41,10 +56,6 @@ a {
 .content-container h2 {
     text-transform: uppercase;
     font-weight: 400;
-}
-.content-container p {
-    font-weight: 300;
-    line-height: 1.5;
 }
 .section-one {
     background-color: rgb(130, 183, 226);

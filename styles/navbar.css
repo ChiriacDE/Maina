@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 4;
 }
 .main-nav * {
   box-sizing: border-box;
@@ -178,6 +179,9 @@
 .main-nav.active .registration:hover {
   border-color: #f57600;
   background-color: #f57600;
+}
+.nav-link.active {
+  text-decoration: underline;
 }
 
 
