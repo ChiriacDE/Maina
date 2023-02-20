@@ -33,7 +33,7 @@
   list-style: none;
 }
 .main-nav li  {
-  
+  margin-bottom: 0;
 }
 .main-nav .tuggle-btn {
   display: none;
