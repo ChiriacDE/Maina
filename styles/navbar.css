@@ -32,6 +32,9 @@
   margin: 0;
   list-style: none;
 }
+.main-nav li  {
+  
+}
 .main-nav .tuggle-btn {
   display: none;
   position: relative;
@@ -104,8 +107,8 @@
   text-decoration: underline;
 }
 .main-nav .tuggle-btn {
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
+  margin-rigth: 10px;
 }
 .main-nav .tuggle-btn span {
   background: #f57600;
