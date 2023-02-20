@@ -108,7 +108,7 @@
 }
 .main-nav .tuggle-btn {
   margin: auto;
-  margin-rigth: 10px;
+  margin-right: 20px;
 }
 .main-nav .tuggle-btn span {
   background: #f57600;
@@ -213,6 +213,9 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #c1c1c1;
     margin-right: 0;
+  }
+  .main-nav .tuggle-content .nav-item:first-child {
+    margin-top: 20px; 
   }
   .main-nav .tuggle-content .nav-item:last-child {
     border-bottom: none;
