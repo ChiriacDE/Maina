@@ -58,11 +58,11 @@ document.querySelectorAll('.flying-button').forEach(button => {
                         '--rotate': 55,
                         '--plane-x': -8,
                         '--plane-y': 24,
-                        duration: .2
+                        duration: .35
                     }, {
                         '--rotate': 40,
-                        '--plane-x': 45,
-                        '--plane-y': -180,
+                        '--plane-x': 105,
+                        '--plane-y': -210,
                         '--plane-opacity': 0,
                         duration: .3,
                         onComplete() {
@@ -104,7 +104,7 @@ document.querySelectorAll('.flying-button').forEach(button => {
                         '--success-opacity': 1,
                         '--success-scale': 1,
                         duration: .25,
-                        delay: .25
+                        delay: .5
                     }]
                 })
     
