@@ -8,12 +8,16 @@
     
     <!-- STYLE SHEETS -->
     <link rel="stylesheet" href="styles/style.css"> 
-    <link rel="stylesheet" href="styles/header.css"> 
     <link rel="stylesheet" href="styles/navbar.css"> 
+    <link rel="stylesheet" href="styles/header.css"> 
+    <link rel="stylesheet" href="styles/newsletter.css"> 
     <link rel="stylesheet" href="styles/footer.css"> 
 
     <!-- IMAGES PRELOADER -->
-    <link rel="preload" href="media/home-background.jpg" as="image" type="image/jpg" crossorigin="anonymous">
+    <link 
+      rel="preload" 
+      href="media/home-background.jpg" 
+      as="image" />
 
     <title>¡Tu Maina!</title>
 </head>
@@ -94,6 +98,40 @@
                 <h2>Nuestra <span class="highlight">misi&oacute;n</span></h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae magni eos iure commodi voluptatibus, adipisci est voluptates harum molestiae sunt in dolorem fuga natus consequatur alias quam quibusdam fugiat excepturi?</p>
             </div>
+        </section>
+
+        <!-- NEWSLETTERS SECTION -->
+        <section id="join-newsletters" class="newsletter">
+            <div class="content-container">
+                <div class="news-text">
+                    <h4>¿Quieres estar siempre al tanto?</h4>
+                    <p>¡Únete a nuestra <b>Newsletter</b> para poderte avisar siempre que subamos contenido nuevo!</p>
+                    <img src="https://images2.imgbox.com/22/73/1f6acDGg_o.png" alt="Icono avi&oacute;n de papel">
+                </div>
+                <div class="news-sign">
+                  <form>
+              
+                    <div class="input-field">
+                      <label for="exampleInputName">Tu nombre</label> <br>
+                      <input type="text" name="name">
+                    </div>
+              
+                    <div class="input-field">
+                      <label for="exampleInputEmail">Tu E-mail</label><br>
+                      <input type="email" name="email">
+                    </div>
+              
+                    <button class="flying-button">
+                      <span class="default">Unirse</span>
+                      <span class="success">¡Gracias!</span>
+                      <div class="left"></div>
+                      <div class="right"></div>
+                    </button>
+              
+                  </form>
+                </div>
+            </div>
+
         </section>
 
         <section id="our-vision" class="full-width section-three">
@@ -196,8 +234,11 @@
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="behaviour/functions.js"></script>
-    <script src="behaviour/header.js"></script>
-    <script src="behaviour/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="behavior/newsletters.js"></script>
+    <script src="behavior/functions.js"></script>
+    <script src="behavior/header.js"></script>
+    <script src="behavior/index.js"></script>
 </body>
 </html>
