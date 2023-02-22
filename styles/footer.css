@@ -1,20 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-a {
-    color: #fff;
-    text-decoration: none;
-}
 .pg-footer {
     font-family: 'Roboto', sans-serif;
 }
+
 .footer {
     position: relative;
     z-index: 0;
     background-color: #004658;
     color: #fff;
 }
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .footer-wave-svg {
     background-color: transparent;
     display: block;
@@ -23,9 +22,11 @@ a {
     top: -1px;
     width: 100%;
 }
+
 .footer-wave-path {
     fill: #fffff2;
 }  
+
 .footer-content {
     margin-left: auto;
     margin-right: auto;
@@ -34,6 +35,7 @@ a {
     position: relative;
     display: flex;
 }  
+
 .footer-content-column {
     box-sizing: border-box;
     float: left;
@@ -42,25 +44,30 @@ a {
     width: 100%;
     color: #fff;
 }  
+
 .footer-content-column ul li a {
     color: #fff;
     text-decoration: none;
 }  
+
 .footer-logo {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
     padding: 40px 20px 0;
 }
+
 .footer-logo-link {
     display: inline-block;
     background: url("../media/maina-logo2-white.svg") no-repeat center/cover;
     width: 200px;
     height: 50px;
 }
+
 .footer-menu {
     margin-top: 30px;
 }  
+
 .footer-menu-name {
     color: #fffff2;
     font-size: 15px;
@@ -72,12 +79,14 @@ a {
     margin-top: 0;
     text-transform: uppercase;
 }
+
 .footer-menu-list {
     list-style: none;
     margin-bottom: 0;
     margin-top: 10px;
     padding-left: 0;
 }
+
 .footer-menu-list li {
     margin-top: 5px;
 }
@@ -87,13 +96,16 @@ a {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .footer-call-to-action-button:hover {
     background-color: #fffff2;
     color: #00bef0;
 }
+
 .button:last-of-type {
     margin-right: 0;
 }
+
 .footer-call-to-action-button {
     background-color: #027b9a;
     border-radius: 21px;
@@ -111,9 +123,11 @@ a {
     cursor: pointer;
     position: relative;
 }
+
 .footer-call-to-action {
     margin-top: 30px;
 }
+
 .footer-call-to-action-title {
     color: #fffff2;
     font-size: 14px;
@@ -124,16 +138,19 @@ a {
     margin-top: 0;
     text-transform: uppercase;
 }
+
 .footer-call-to-action-link-wrapper {
     margin-bottom: 0;
     margin-top: 10px;
     color: #fff;
     text-decoration: none;
 }
+
 .footer-call-to-action-link-wrapper a {
     color: #fff;
     text-decoration: none;
 }
+
 .footer-social-links {
     bottom: 0;
     height: 54px;
@@ -141,6 +158,7 @@ a {
     right: 0;
     width: 236px;
 }
+
 .footer-social-amoeba-svg {
     height: 54px;
     left: 0;
@@ -149,20 +167,24 @@ a {
     top: 1px;
     width: 236px;
 }
+
 .footer-social-amoeba-path {
     fill: #027b9a;
 }
+
 .footer-social-link.linkedin {
     height: 26px;
     left: 3px;
     top: 11px;
     width: 26px;
 }
+
 .footer-social-link {
     display: block;
     padding: 10px;
     position: absolute;
 }
+
 .hidden-link-text {
     position: absolute;
     clip: rect(1px 1px 1px 1px);
@@ -176,50 +198,59 @@ a {
     border: 0;
     top: 50%;
 }
+
 .footer-social-icon-svg {
     display: block;
 }
+
 .footer-social-icon-path {
     fill: #fffff2;
     transition: fill .2s;
 }
+
 .footer-social-link.twitter {
     height: 28px;
     left: 62px;
     top: 3px;
     width: 28px;
 }
+
 .footer-social-link.youtube {
     height: 24px;
     left: 123px;
     top: 12px;
     width: 24px;
 }
+
 .footer-social-link.github {
     height: 34px;
     left: 172px;
     top: 7px;
     width: 34px;
 }
+
 .footer-copyright {
     background-color: #027b9a;
     color: #fff;
     padding: 15px 30px;
-text-align: center;
+    text-align: center;
 }
+
 .footer-copyright-wrapper {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
 }
+
 .footer-copyright-text {
-color: #fff;
+    color: #fff;
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 0;
     margin-top: 0;
 }
+
 .footer-copyright-link {
     color: #fff;
     text-decoration: none;
@@ -232,6 +263,7 @@ color: #fff;
     .footer-content {
         flex-direction: column;
     }
+
     .footer-content-column {
         padding-bottom: 15px;
     }

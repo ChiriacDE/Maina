@@ -101,26 +101,26 @@
         </section>
 
         <!-- NEWSLETTERS SECTION -->
-        <section id="join-newsletters" class="newsletter">
+        <section id="join-newsletters" class="newsletter slim-section">
             <div class="content-container">
                 <div class="news-text">
                     <h4>¿Quieres estar siempre al tanto?</h4>
                     <p>¡Únete a nuestra <b>Newsletter</b> para poderte avisar siempre que subamos contenido nuevo!</p>
-                    <img src="https://images2.imgbox.com/22/73/1f6acDGg_o.png" alt="Icono avi&oacute;n de papel">
                 </div>
                 <div class="news-sign">
                   <form>
               
                     <div class="input-field">
-                      <label for="exampleInputName">Tu nombre</label> <br>
-                      <input type="text" name="name">
+                      <label for="exampleInputName">Tu nombre</label>
+                      <input id="newsletter__name-input" type="text" name="name">
                     </div>
               
                     <div class="input-field">
-                      <label for="exampleInputEmail">Tu E-mail</label><br>
-                      <input type="email" name="email">
+                      <label for="exampleInputEmail">Tu E-mail</label>
+                      <input id="newsletter__email-input" type="email" name="email">
                     </div>
-              
+                   
+                    <!-- PAPER-FLYING BUTTON -->
                     <button class="flying-button">
                       <span class="default">Unirse</span>
                       <span class="success">¡Gracias!</span>
@@ -238,7 +238,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="behavior/newsletters.js"></script>
     <script src="behavior/functions.js"></script>
-    <script src="behavior/header.js"></script>
+    <script src="behavior/navbar.js"></script>
     <script src="behavior/index.js"></script>
 </body>
 </html>

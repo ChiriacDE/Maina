@@ -1,16 +1,25 @@
-document.querySelectorAll('.flying-button').forEach(button => {
+function buttonFliesAway() {
+    document.querySelectorAll('.flying-button').forEach(button => {
 
         let getVar = variable => getComputedStyle(button).getPropertyValue(variable);
-    
+        
+        // Get email and name from the contact form
+        let getEmail = document.querySelector('#newsletter__email-input');
+        let getName = document.querySelector('#newsletter__name-input');
+
         button.addEventListener('click', e => {
             
             // Prevent default behaviour of the button;
             e.preventDefault();
-    
+
+            // Validate email and name with regex
+            if (!validateEmail(getEmail) || !validateName(getName)) 
+                return;
+
+            // Add active class (create folding paper animation)
             if(!button.classList.contains('active')) {
-    
                 button.classList.add('active');
-    
+                    
                 gsap.to(button, {
                     keyframes: [{
                         '--left-wing-first-x': 50,
@@ -84,7 +93,7 @@ document.querySelectorAll('.flying-button').forEach(button => {
                         }
                     }]
                 })
-    
+
                 gsap.to(button, {
                     keyframes: [{
                         '--text-opacity': 0,
@@ -107,10 +116,55 @@ document.querySelectorAll('.flying-button').forEach(button => {
                         delay: .5
                     }]
                 })
-    
+
             }
-    
+
         })
-    
+
+        // Get subscription request
+
     });
-    
+}
+
+// Regex email format
+function validateEmail(inputText) {
+    // Example of valid email id
+
+    //     mysite@ourearth.com
+    //     my.ownsite@ourearth.org
+    //     mysite@you.me.net
+
+    // Example of invalid email id
+
+    //     mysite.ourearth.com [@ is not present]
+    //     mysite@.com.my [ tld (Top Level domain) can not start with dot "." ]
+    //     @you.me.net [ No character before @ ]
+    //     mysite123@gmail.b [ ".b" is not a valid tld ]
+    //     mysite@.org.org [ tld can not start with dot "." ]
+    //     .mysite@mysite.org [ an email should not be start with "." ]
+    //     mysite()*@gmail.com [ here the regular expression only allows character, digit, underscore, and dash ]
+    //     mysite..1234@yahoo.com [double dots are not allowed]
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(inputText.value.match(mailFormat)) 
+        return true;
+    else {
+        alert("You have entered an invalid email address!");
+        inputText.focus();
+        return false;
+    }
+}
+
+// Regex name format
+function validateName(inputText) {
+    // Validate only alphabetical characters [a-zA-Z]
+    const nameFormat = /^[A-Za-z]+([A-Za-z\s]*)$/;
+
+    if(inputText.value.match(nameFormat)) 
+        return true;
+    else {
+        alert("You have entered an invalid name!");
+        inputText.focus();
+        return false;
+    }
+}
