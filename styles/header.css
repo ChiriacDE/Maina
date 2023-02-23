@@ -1,4 +1,8 @@
-/**** PAGE HEADER ****/
+/**** IMPORTS ****/
+@import url(style.css);
+
+
+/**** HEADERS ****/
 header {
     display: flex;
     height: auto;

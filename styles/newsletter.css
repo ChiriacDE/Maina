@@ -1,3 +1,8 @@
+/**** IMPORTS ****/
+@import url(style.css);
+
+
+/**** NEWSLETTER ****/
 .newsletter {
         display: flex;
         background-color: #f1f1f6;

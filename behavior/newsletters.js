@@ -13,9 +13,9 @@ function buttonFliesAway() {
             e.preventDefault();
 
             // Validate email and name with regex
-            if (!validateEmail(getEmail) || !validateName(getName)) 
+            if (!validateNewsletterInputs(getEmail, getName)) 
                 return;
-
+                           
             // Add active class (create folding paper animation)
             if(!button.classList.contains('active')) {
                 button.classList.add('active');
@@ -146,12 +146,12 @@ function validateEmail(inputText) {
     //     mysite..1234@yahoo.com [double dots are not allowed]
     const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(inputText.value.match(mailFormat)) 
-        return true;
-    else {
-        alert("You have entered an invalid email address!");
+    // Correct match return 0, other wise, wrong emails format is -1
+    if(inputText.value.match(mailFormat)) {
+        return 0;
+    } else {
         inputText.focus();
-        return false;
+        return -1;
     }
 }
 
@@ -160,11 +160,52 @@ function validateName(inputText) {
     // Validate only alphabetical characters [a-zA-Z]
     const nameFormat = /^[A-Za-z]+([A-Za-z\s]*)$/;
 
-    if(inputText.value.match(nameFormat)) 
-        return true;
-    else {
-        alert("You have entered an invalid name!");
+    // Correct match return 0, other wise, wrong names format is -2
+    if (inputText.value.match(nameFormat)) {
+        return 0;
+    } else {
         inputText.focus();
-        return false;
+        return -2;
     }
 }
+
+// Validate both mail and name generating a different error message for each case
+function validateNewsletterInputs(email, name) {
+    var validationIncomes = 0;
+    var errorBox;
+
+    // Verify mail and name and add their code values
+    validationIncomes += validateEmail(email) + validateName(name);
+
+    switch (validationIncomes) {
+        // Mail and Name are correct
+        case 0:
+            return true;
+        // Mail format is wrong
+        case -1: 
+            errorBox = new ErrorBox("Indrouce por favor una dirección de correo válida!",
+                                    "Un correo válido debe tener un principio alfanumérico, debe contener una @, etc.");
+            break;
+        // Name format is wrong
+        case -2: 
+            errorBox = new ErrorBox("Indrouce por favor un nombre válido!",
+                                    "Introduce por favor únicamente letras mayúsculas y minúsculas, sin números, carácteres especials o guiones.");
+            break;
+        // Both name and mail formats are wrong
+        case -3:
+            errorBox = new ErrorBox("Introduce por favor un nombre y dirección de correo válidos!" , 
+                                    "Introduce por favor únicamente letras mayúsculas y minúsculas, sin números, carácteres especials o guiones " + 
+                                    "y un correo electrónico con un principio alfanumérico, que contenga una @, un dominio, etc.");
+            break;
+    }
+    
+    // Call the render method on the error box instance, if it was created
+    if (errorBox) {
+        errorBox.render();
+        return false;
+    } else {
+        return true;
+    }
+}
+
+

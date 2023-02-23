@@ -1,3 +1,14 @@
+function detectMobileView() {
+    const body = document.querySelector('body');
+    const isMobileView = window.innerWidth < 861;
+  
+    if (isMobileView) {
+      body.classList.add('mobile-view');
+    } else {
+      body.classList.remove('mobile-view');
+    }
+  }
+
 // GET LAST BODYS SECTION COLOR
 function getLastSectionBgColor() {
     // Get all the section elements in the document
@@ -24,22 +35,25 @@ function changeFooterFillColor(color) {
 
 // HIGHLIGHT NAVTAB BASED ON VIEWPOINTS SECTION
 function highlightNavLinks() {
-    const navLinks = document.querySelectorAll('.nav-link')
-    const header = document.querySelector('header')
-    const footer = document.querySelector('footer')
+    const navLinks = document.querySelectorAll('.nav-link');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
 
     window.addEventListener('scroll', () => {
         // Loop through each section
         document.querySelectorAll('section').forEach((section) => {
         // Get the section's bounding rectangle
-        const sectionRect = section.getBoundingClientRect()
+        const sectionRect = section.getBoundingClientRect();
+
         // Check if the section is in the viewport
         if (sectionRect.top <= 100 && sectionRect.bottom >= 0) {
             // Get the section's ID
             const sectionId = section.getAttribute('id');
+
             // Loop through each nav link and remove the active class
             navLinks.forEach((navLink) => {
             navLink.classList.remove('active');
+
             // Add the active class to the nav link that matches the section's ID
             if (navLink.getAttribute('href') === `#${sectionId}`) {
                 navLink.classList.add('active');
@@ -49,6 +63,7 @@ function highlightNavLinks() {
         } 
     });
     
+
     // Do the same for the header and footer
     const headerRect = header.getBoundingClientRect()
     const footerRect = footer.getBoundingClientRect()
@@ -74,6 +89,6 @@ function isWindowBottom() {
     
     // Return true when so
     if (scrollBottom <= 0) {
-      return true
+      return true;
     }
 }
