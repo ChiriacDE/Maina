@@ -1,0 +1,93 @@
+/**** IMPORTS ****/
+@import '../_base.scss';
+
+
+/**** NEWSLETTER ****/
+.newsletter {
+	display: flex;
+	background-color: #f1f1f6;
+	.content-container {
+		width: auto;
+		display: flex;
+		overflow: hidden;
+	}
+	form {
+		display: flex;
+		text-align: left;
+		color: #aa81d8;
+		font-size: 1rem;
+	}
+	.input-field {
+		position: relative;
+		margin: 10px;
+	}
+	input {
+		background-color: #f1f1f6;
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 0.9rem;
+		border: none;
+		border-bottom: 2px solid #be9fe1;
+		font-size: 0.9rem;
+		width: 100%;
+		border-radius: 5px;
+		margin-top: 10px;
+		padding: 0;
+		&:focus {
+			outline: none;
+			color: rgba(0, 0, 0, 0.6);
+			border-bottom: 2px solid #aa81d8;
+		}
+	}
+}
+.news-text {
+	color: black;
+	margin: auto;
+	width: 450px;
+	h4 {
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 24px;
+	}
+	img {
+		width: 100%;
+		max-width: 725px;
+	}
+}
+.news-sign {
+	background-color: #f1f1f6;
+	border-radius: 14px;
+	margin: auto;
+}
+.newsletter__spanner {
+	font-size: 14px;
+	margin: 10px;
+	color: rgba(0, 0, 0, 0.6);
+	box-decoration-break: clone;
+	-moz-box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+}
+@media screen and (min-width: 861px) {
+	.newsletter {
+		.input-field {
+			width: 33%;
+		}
+	}
+	.news-sign {
+		padding: 50px 50px 20px;
+	}
+}
+@media screen and (max-width: 860px) {
+	.newsletter {
+		.content-container {
+			flex-wrap: wrap;
+		}
+		form {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.news-text {
+		text-align: center;
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,84 @@
+/**** IMPORTS ****/
+@import '_base.scss';
+
+
+/**** HEADERS ****/
+header {
+    display: flex;
+    height: auto;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    p {
+        font-size: 22px;
+        font-weight: 300;
+        padding: 0 20px;
+    }
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px;
+        height: auto;
+        width: auto;
+        background-color: rgba(45, 36, 45, 0.2);
+    }
+}
+.header-container {
+    margin: 20vh auto auto;
+    p {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.25em;
+        color: #f57600;
+    }
+}
+.header-highlight {
+    color: #f57600;
+}
+// Custom nav-bar for home site
+.main-navbar {
+    a {
+        color: #fff;
+        font-size: 36px;
+        padding: 20px;
+        &:not(.main-navbar a:nth-child(1)) {
+            border-left: 2px solid #fff;
+        }
+    }
+}
+
+/**** BACKGROUNDS ****/
+.home { 
+    header {
+        background: url("../images/home-background.jpg") no-repeat center/cover;
+    }
+}
+.privacy, .terms { 
+    header {
+        background: url("../images/privacy-background.jpg") no-repeat center/cover;
+    }
+}
+/**** DESKTOP VIEW ****/
+@media screen and (min-width: 861px) {
+    .header-container {
+        max-width: 1200px;
+    }
+    #header-hamburger {
+        display: none;   
+    }
+}
+
+@media screen and (max-width: 860px) {
+	.header-container {
+		h1 {
+			text-align: center;
+			font-size: 44px;
+			font-weight: 900;
+			padding: 20px;
+		}
+		p {
+			padding: 0 20px;
+		}
+	}
+}
