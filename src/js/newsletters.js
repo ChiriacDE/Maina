@@ -14,8 +14,8 @@ function buttonFliesAway() {
 
             // Validate email and name with regex
             if (!validateNewsletterInputs(getEmail, getName)) 
-                return;
-                           
+                return; 
+
             // Add active class (create folding paper animation)
             if(!button.classList.contains('active')) {
                 button.classList.add('active');
@@ -194,6 +194,9 @@ function validateNewsletterInputs(email, name) {
     // Call the render method on the error box instance, if it was created
     if (errorBox) {
         errorBox.render();
+        
+        // Disable background scrolling
+        document.querySelector('body').classList.add('no-scroll');   
         return false;
     } else {
         return true;

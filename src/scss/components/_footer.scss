@@ -3,7 +3,6 @@
 
 
 /**** FOOTER ****/
-/********* MOBILE VIEW ********/
 pg-footer {
 	font-family: 'Roboto', sans-serif;
 }
@@ -237,10 +236,4 @@ footer {
 	text-decoration: none;
 }
 @media screen and (max-width: 860px) {
-	.footer-content {
-		flex-direction: column;
-	}
-	.footer-content-column {
-		padding-bottom: 15px;
-	}
 }

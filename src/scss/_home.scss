@@ -68,17 +68,3 @@ header {
         display: none;   
     }
 }
-
-@media screen and (max-width: 860px) {
-	.header-container {
-		h1 {
-			text-align: center;
-			font-size: 44px;
-			font-weight: 900;
-			padding: 20px;
-		}
-		p {
-			padding: 0 20px;
-		}
-	}
-}

@@ -111,6 +111,11 @@ li {
 .hidden {
     display: none;
 }
+.no-scroll {
+    position: relative;
+    overflow: hidden;    
+    z-index: 0;
+}
 /**** DESKTOP VIEW ****/
 @media screen and (min-width: 861px) {
     .content-container {

@@ -4,9 +4,9 @@
   "description": "¡El proyecto Maina empieza a tomar forma! ¡Aprende a interactuar correctamente con los más pequeños!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass --include-path scss src/scss/main.scss src/scss/main.css",
-    "watch": "nodemon -e scss -x 'npm run css'"
+    "uglify-css": "uglifycss src/scss/main.css > src/scss/main.min.css",
+    "watch": "nodemon -e scss -x 'npm run css && npm run uglify-css'"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,13 @@
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.21"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiriacDE/Maina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChiriacDE/Maina/issues"
+  },
+  "homepage": "https://github.com/ChiriacDE/Maina#readme"
 }

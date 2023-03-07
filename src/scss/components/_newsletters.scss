@@ -1,8 +1,6 @@
 /**** IMPORTS ****/
 @import '../_base.scss';
 
-
-/**** NEWSLETTER ****/
 .newsletter {
 	display: flex;
 	background-color: #f1f1f6;
@@ -77,17 +75,5 @@
 	}
 }
 @media screen and (max-width: 860px) {
-	.newsletter {
-		.content-container {
-			flex-wrap: wrap;
-		}
-		form {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
-	.news-text {
-		text-align: center;
-		margin-top: 0;
-	}
+
 }

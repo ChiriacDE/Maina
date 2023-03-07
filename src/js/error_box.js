@@ -152,6 +152,7 @@ class ErrorBox {
         this.errorBox.querySelectorAll('.error-button-box').forEach(button => {
             button.addEventListener('click', () => {
                 this.errorBox.remove();
+                document.querySelector('body').classList.remove('no-scroll');
             });
         });
     }
